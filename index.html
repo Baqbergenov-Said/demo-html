@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SAFRA TRAVEL | Professional Visa & Tour Services</title>
+
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="header">
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">SAFRA <span>TRAVEL</span></a>
+            <ul class="nav-links" id="menu">
+                <li><a href="#home" data-t="nav_home">Home</a></li>
+                <li><a href="#services" data-t="nav_services">Services</a></li>
+                <li><a href="#packages" data-t="nav_packages">Packages</a></li>
+                <li><a href="#contact" data-t="nav_contact">Contact</a></li>
+                <div class="lang-box">
+                    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+                    <button class="lang-btn" onclick="setLang('ru')">RU</button>
+                    <button class="lang-btn" onclick="setLang('uz')">UZ</button>
+                </div>
+            </ul>
+            <div class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-slideshow">
+        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1920&q=80')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
+        <h1 data-t="hero_title">Explore the World with Safra</h1>
+        <p data-t="hero_desc">Premium Visa Assistance & Tour Packages from Uzbekistan.</p>
+        <a href="#packages" class="btn-cta" data-t="hero_btn">Discover More</a>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="section container" id="services">
+    <div class="section-title reveal">
+        <h2 data-t="serv_h">Our Services</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="services-grid">
+        <div class="service-card reveal">
+            <i class="fas fa-passport"></i>
+            <h3 data-t="serv_1_h">Visa Support</h3>
+            <p data-t="serv_1_p">High success rates for Schengen, USA, UK, and Asian visas.</p>
+        </div>
+        <div class="service-card reveal">
+            <i class="fas fa-globe-asia"></i>
+            <h3 data-t="serv_2_h">Tour Packages</h3>
+            <p data-t="serv_2_p">Handpicked holiday destinations for an unforgettable experience.</p>
+        </div>
+        <div class="service-card reveal">
+            <i class="fas fa-hotel"></i>
+            <h3 data-t="serv_3_h">Hotel Booking</h3>
+            <p data-t="serv_3_p">Direct access to worldwide premium hotels at the best rates.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Packages -->
+<section class="section packages" id="packages">
+    <div class="container">
+        <div class="section-title reveal">
+            <h2 data-t="dest_h">Tour Packages</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="tour-grid" id="tourList"></div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="section container" id="contact">
+    <div class="contact-grid reveal">
+        <div class="contact-box">
+            <i class="fas fa-user-tie"></i>
+            <span class="label" data-t="boss_label">Director</span>
+            <p>SEYDǴALI BAQBERGENOV BEKSAIT ULÍ</p>
+        </div>
+
+        <div class="contact-box">
+            <i class="fas fa-clock"></i>
+            <span class="label" data-t="work_h_label">Work Hours</span>
+            <p>09:00 — 18:00</p>
+        </div>
+
+        <div class="contact-box"><i class="fas fa-phone-alt"></i><span class="label">Tel</span><p>+998 50 405 40 85</p></div>
+        <div class="contact-box"><i class="fas fa-envelope"></i><span class="label">Email</span><p>info@safra-travel.uz</p></div>
+        <div class="contact-box"><i class="fas fa-map-marker-alt"></i><span class="label" data-t="address_label">Address</span><p>Shota Rustaveli 1-tor koʻchasi, 8A, Toshkent</p></div>
+    </div>
+    <div class="socials reveal">
+        <a href="https://www.instagram.com/safra_travel_uz/" target="_blank" style="color:#e1306c"><i class="fab fa-instagram"></i></a>
+        <a href="https://t.me/safra_travel_uz" target="_blank" style="color:#0088cc"><i class="fab fa-telegram-plane"></i></a>
+        <a href="https://wa.me/998998418505" target="_blank" style="color:#25d366"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 SAFRA TRAVEL MCHj | safra-travel.uz | All Rights Reserved.</p>
+    <span class="pp-link" onclick="openPP()" data-t="pp_link">Privacy Policy</span>
+</footer>
+
+<!-- LARGE PRIVACY MODAL -->
+<div class="modal-overlay" id="ppModal" onclick="closePPOutside(event)">
+    <div class="modal-content">
+        <i class="fas fa-times close-modal" onclick="closePP()"></i>
+        <h3 data-t="pp_title">Privacy Policy</h3>
+        <div class="modal-body">
+            <p data-t="pp_head">SAFRA TRAVEL does not mandatorily collect personal data from users on this website.</p>
+            <div class="pp-list">
+                <div class="pp-item">
+                    <strong data-t="pp_i1_h">1. Data Collection</strong>
+                    <span data-t="pp_i1_b">The site is for informational purposes only. Registration is not required.</span>
+                </div>
+                <div class="pp-item">
+                    <strong data-t="pp_i2_h">2. Communication</strong>
+                    <span data-t="pp_i2_b">If you connect via phone, email, or messengers, your data is used only for customer service.</span>
+                </div>
+                <div class="pp-item">
+                    <strong data-t="pp_i3_h">3. Cookies</strong>
+                    <span data-t="pp_i3_b">This site does not use cookies or hidden tracking technologies.</span>
+                </div>
+                <div class="pp-item">
+                    <strong data-t="pp_i4_h">4. Security</strong>
+                    <span data-t="pp_i4_b">User privacy is highly respected. No information is shared with third parties.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Link to JS -->
+<script src="script.js"></script>
+</body>
+</html>
